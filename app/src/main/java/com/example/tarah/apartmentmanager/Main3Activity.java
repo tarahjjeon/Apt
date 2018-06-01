@@ -4,16 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class Main3Activity extends AppCompatActivity {
     ImageButton setBtn3;
-    Button addBtn,addBtn2;
+
     TextView notice1,notice2,complaint,delivery,visitCar,community;
-    RelativeLayout notice01,notice02;
+
     boolean check=true;
 
    final int requestcode=34;
@@ -73,15 +71,13 @@ public class Main3Activity extends AppCompatActivity {
                 if(check) {
                     notice1.setVisibility(v.GONE);
                     notice2.setHeight(205);
-                    addBtn.setVisibility(View.VISIBLE);
-                    addBtn2.setVisibility(View.GONE);
+
                     check=!check;
                 }
                 else {
                     notice1.setVisibility(v.VISIBLE);
                     notice2.setHeight(108);
-                    addBtn.setVisibility(View.GONE);
-                    addBtn2.setVisibility(View.GONE);
+
                     check=!check;
                 }
             }
