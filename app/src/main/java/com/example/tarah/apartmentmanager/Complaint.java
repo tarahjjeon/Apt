@@ -3,6 +3,7 @@ package com.example.tarah.apartmentmanager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 public class Complaint extends AppCompatActivity {
@@ -13,6 +14,7 @@ public class Complaint extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complaint);
         init();
+        addListener();
 
     }
     public void init(){
@@ -23,9 +25,10 @@ public class Complaint extends AppCompatActivity {
         cptS2=findViewById(R.id.cptS2);
         cptG=findViewById(R.id.cptG);
         cptG1=findViewById(R.id.cptG1);
-       // cptS2.setVisibility(View.GONE);
+        cptS2.setVisibility(View.GONE);
 
     }
+ public void addListener(){
 
-
+ }
 }

@@ -12,11 +12,11 @@ public class Main3Activity extends AppCompatActivity {
 
     TextView notice1,notice2,complaint,delivery,visitCar,community;
 
-    boolean check=true;
+
 
    final int requestcode=34;
-//    final int requestcode2=35;
-//    final int requestcode3=36;
+  final int requestcode2=35;
+    final int requestcode3=36;
 
 
     @Override
@@ -48,62 +48,32 @@ public class Main3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(check) {
-                    notice2.setVisibility(v.GONE);
+                    Intent intent=new Intent(Main3Activity.this,Notice.class);
+                    intent.putExtra("test",70);
+                    startActivityForResult(intent,requestcode2);
 
-                    notice1.setHeight(200);
-
-
-                    check=!check;
-                }else {
-                    notice2.setVisibility(v.VISIBLE);
-                    notice2.setHeight(108);
-
-
-                    check=!check;
-                }
             }
         });
         notice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(check) {
-                    notice1.setVisibility(v.GONE);
-                    notice2.setHeight(205);
 
-                    check=!check;
-                }
-                else {
-                    notice1.setVisibility(v.VISIBLE);
-                    notice2.setHeight(108);
+                Intent intent=new Intent(Main3Activity.this,Notice.class);
+                intent.putExtra("test",72);
+                startActivityForResult(intent,requestcode3);
 
-                    check=!check;
-                }
             }
         });
         complaint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                Intent intent=new Intent(Main3Activity.this,Complaint.class);
-               startActivityForResult(intent,requestcode);
+                startActivityForResult(intent,requestcode);
 
             }
         });
-//        addBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent=new Intent(Main3Activity.this,Notice.class);
-//                startActivityForResult(intent,requestcode2);
-//            }
-//        });
-//        addBtn2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent2=new Intent(Main3Activity.this,Notice.class);
-//                startActivityForResult(intent2,requestcode3);
-//            }
-//        });
+
 
 
     }
