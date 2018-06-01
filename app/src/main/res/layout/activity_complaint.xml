@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="10dp"
+
+    android:paddingVertical="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Complaint">
+
+   <TextView
+       android:text="민원"
+       android:textColor="#ffffff"
+       android:textAlignment="center"
+      android:gravity="center_vertical"
+       android:background="#bb0f0f8d"
+       android:textSize="25dp"
+       android:layout_width="170dp"
+       android:layout_height="60dp"
+     />
+    <TextView
+        android:id="@+id/newCpt"
+        android:text="민원온거뜸"
+        android:background="#342344"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginHorizontal="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="0dp"
+            android:background="#bb0f0f8d"
+            android:gravity="center_vertical"
+            android:text="민원 신고"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+
+            android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_marginRight="2dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cptS"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:background="#bb0f0f8d"
+                android:text="경비실"
+                android:gravity="center_vertical"
+
+                />
+
+            <TextView
+                android:id="@+id/cptS1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="#bb0f0f8d"
+                android:gravity="center_vertical"
+                android:text="순찰 중" />
+
+            <TextView
+                android:id="@+id/cptS2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="#bb0f0f8d"
+                android:text="근무 중" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_marginLeft="2dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cptG"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:background="#bb0f0f8d"
+                android:text="관리실"
+                android:gravity="center_vertical"
+
+                />
+
+
+            <TextView
+                android:id="@+id/cptG1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="#bb0f0f8d"
+                android:text="근무 중\n근무 시간:"
+                android:gravity="center_vertical"
+               />
+
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

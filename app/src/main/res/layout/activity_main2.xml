@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+    <TextView
+        android:text="사용자 설정"
+        android:paddingLeft="20dp"
+        android:paddingVertical="10dp"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+    <EditText
+        android:id="@+id/newPw"
+        android:text="비밀번호를 입력하세요"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="#ede2e2f4" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <EditText
+       android:id="@+id/carNum"
+        android:text="차량 번호를 등록하세요"
+
+        android:layout_marginLeft="40dp"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+       android:background="#ede2e2f4"   />
+
+
+        <Button
+
+            android:id="@+id/addCarBtn"
+            android:text="추가"
+            android:textColor="#ffff"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="#bb0f0f8d"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/car2Num"
+        android:text="차량 번호를 등록하세요"
+        android:layout_marginLeft="40dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="#ede2e2f4"
+        />
+    <EditText
+        android:id="@+id/car3Num"
+        android:text="차량 번호를 등록하세요"
+        android:layout_marginLeft="40dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="#ede2e2f4"   />
+    <Button
+        android:id="@+id/userSetBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp"
+        android:text="확인"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="#bb0f0f8d"
+        />
+
+
+
+</LinearLayout>
