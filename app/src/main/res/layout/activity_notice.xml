@@ -63,12 +63,13 @@
 
 <ListView
     android:id="@+id/noticeList"
-    android:background="#120000"
+
+    android:background="#ffffff"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
     <ListView
         android:id="@+id/noticeList2"
-        android:background="#120000"
+        android:background="#111fff"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
