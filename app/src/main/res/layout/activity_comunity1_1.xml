@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Comunity1_1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:text="우리동네 장터"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:background="#f1c550"
+            android:textColor="#f6f6f6"
+            android:gravity="center_vertical" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="마이페이지"
+            android:background="#f1c550"
+            android:shadowColor="#f1c550"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent">
+        </Spinner>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="무료나눔"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="삽니다"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_width="160dp"
+                android:layout_height="230dp"
+                android:padding="10dp"
+                android:background="#f6f6f6">
+                <ImageView
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:src="@drawable/deliveryboximg"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20dp"
+                    android:text="전자랜지"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="right"
+                    android:text="48초전"/>
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:textSize="25dp"
+                    android:gravity="right"
+                    android:text="10000원"
+                    android:textColor="#ff5f5f"/>
+            </LinearLayout>
+
+
+
+
+
+        </GridLayout>
+
+    </ScrollView>
+
+</LinearLayout>

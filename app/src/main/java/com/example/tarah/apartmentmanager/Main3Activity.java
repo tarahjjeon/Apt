@@ -38,8 +38,6 @@ public class Main3Activity extends AppCompatActivity {
 //       notice01=(RelativeLayout)findViewById(R.id.notice01);
 //       notice02=(RelativeLayout)findViewById(R.id.notice02);
 
-
-
     }
     public void addListener(){
 
@@ -90,6 +88,8 @@ public class Main3Activity extends AppCompatActivity {
 
             }
         });
+
+
 //        addBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
