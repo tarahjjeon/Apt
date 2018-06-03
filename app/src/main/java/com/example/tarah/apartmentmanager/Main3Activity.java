@@ -14,9 +14,13 @@ public class Main3Activity extends AppCompatActivity {
 
 
 
-   final int requestcode=34;
-  final int requestcode2=35;
-    final int requestcode3=36;
+   final int requestcode11=34;
+  final int requestcode12=35;
+    final int requestcode13=36;
+    final int requestcode14=37;
+    final int requestcode15=38;
+
+
 
 
     @Override
@@ -48,7 +52,7 @@ public class Main3Activity extends AppCompatActivity {
 
                     Intent intent=new Intent(Main3Activity.this,Notice.class);
                     intent.putExtra("test",70);
-                    startActivityForResult(intent,requestcode2);
+                    startActivityForResult(intent,requestcode12);
 
             }
         });
@@ -59,7 +63,7 @@ public class Main3Activity extends AppCompatActivity {
 
                 Intent intent=new Intent(Main3Activity.this,Notice.class);
                 intent.putExtra("test",72);
-                startActivityForResult(intent,requestcode3);
+                startActivityForResult(intent,requestcode13);
 
             }
         });
@@ -67,11 +71,31 @@ public class Main3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                Intent intent=new Intent(Main3Activity.this,Complaint.class);
-                startActivityForResult(intent,requestcode);
+                startActivityForResult(intent,requestcode11);
 
             }
         });
-
+community.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(Main3Activity.this,Comunity.class);
+        startActivityForResult(intent,requestcode14);
+    }
+});
+delivery.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(Main3Activity.this,Delivery.class);
+        startActivityForResult(intent,requestcode15);
+    }
+});
+//visitCar.setOnClickListener(new View.OnClickListener() {
+//    @Override
+//    public void onClick(View v) {
+//        Intent intent=new Intent(Main3Activity.visitCar.class);
+//        startActivityForResult(intent,requestcode5);
+//    }
+//});
 //        addBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
