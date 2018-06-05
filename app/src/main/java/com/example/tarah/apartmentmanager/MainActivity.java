@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference hyojin= FirebaseDatabase.getInstance().getReference("mainLogin/user");
         user first=new user("apt","효진",318);
        hyojin.child(first.getId()).setValue( first);
-//        hyojin.child(first.getId()).child("name").setValue("윤채");
+       //hyojin.child(first.getId()).child("name").setValue("윤채");
         // hyojin.child(first.getId()).removeValue();
 
         init();
