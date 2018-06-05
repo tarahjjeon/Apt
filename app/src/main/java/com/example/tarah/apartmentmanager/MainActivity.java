@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText loginC;
@@ -18,6 +21,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        DatabaseReference hyojin= FirebaseDatabase.getInstance().getReference("mainLogin/user");
+        user first=new user("apt","효진",318);
+       hyojin.child(first.getId()).setValue( first);
+//        hyojin.child(first.getId()).child("name").setValue("윤채");
+        // hyojin.child(first.getId()).removeValue();
+
         init();
         addListener();
     }

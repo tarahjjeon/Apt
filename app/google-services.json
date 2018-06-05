@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "223306660274",
+    "firebase_url": "https://aptmanager-c479c.firebaseio.com",
+    "project_id": "aptmanager-c479c",
+    "storage_bucket": "aptmanager-c479c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223306660274:android:2ad07d48e20049f8",
+        "android_client_info": {
+          "package_name": "com.example.tarah.apartmentmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223306660274-jg61nqh8i694emg4bupvf6inq1ag6e32.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tarah.apartmentmanager",
+            "certificate_hash": "80164e3e131b709a298ebe858a2787f683dc875f"
+          }
+        },
+        {
+          "client_id": "223306660274-ig1s9ne66dq21971sdh2hhgu339dhk7b.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "223306660274-ig1s9ne66dq21971sdh2hhgu339dhk7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKiyY8I8ZksX24HfOYavBG-PZGZFO4U9s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223306660274-ig1s9ne66dq21971sdh2hhgu339dhk7b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
