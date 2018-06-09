@@ -16,77 +16,35 @@
         android:gravity="center_vertical"
         android:background="#3d6cb9"
         android:textColor="#f0f0f0"/>
-    <GridLayout
+    <!--<GridLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:columnCount="2">-->
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnCount="2">
-        <LinearLayout
+        android:layout_height="match_parent">
 
-            android:orientation="vertical"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_margin="10dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="date"
-                android:textSize="20dp"
-                android:textAlignment="center" />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:src="@drawable/deliveryboxcheckimg"/>
-        </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_margin="10dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="date"
-                android:textSize="20dp"
-                android:textAlignment="center"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:src="@drawable/deliveryboximg"/>
-        </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_margin="10dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="date"
-                android:textSize="20dp"
-                android:textAlignment="center"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:src="@drawable/deliveryboximg"/>
-        </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_margin="10dp">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="date"
-                android:textSize="20dp"
-                android:textAlignment="center"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:src="@drawable/deliveryboximg"/>
-        </LinearLayout>
-    </GridLayout>
+
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="160dp"-->
+            <!--android:layout_height="160dp"-->
+            <!--android:layout_margin="10dp">-->
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:text="date"-->
+                <!--android:textSize="20dp"-->
+                <!--android:textAlignment="center"/>-->
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="110dp"-->
+                <!--android:src="@drawable/deliveryboximg"/>-->
+        <!--</LinearLayout>-->
+    <!--</GridLayout>-->
+    </ListView>
 </LinearLayout>
