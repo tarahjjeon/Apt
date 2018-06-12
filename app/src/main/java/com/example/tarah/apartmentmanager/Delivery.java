@@ -8,13 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.GridView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class Delivery extends AppCompatActivity {
-    ListView listView;
+    GridView gridView;
     DeliveryAdapter adapter;
     Context context;
     @Override
@@ -22,16 +22,18 @@ public class Delivery extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
 
-        listView=(ListView) findViewById(R.id.listView);
+        gridView=(GridView) findViewById(R.id.gridView);
         adapter = new DeliveryAdapter(getApplicationContext(), R.layout.delivery_item);
+//        adapter = new DeliveryAdapter();
 
         adapter.addItems(new DeliveryItem("2018-06-03", 1));
         adapter.addItems(new DeliveryItem("2018-06-05", 1));
         adapter.addItems(new DeliveryItem("2018-06-07", 0));
         adapter.addItems(new DeliveryItem("2018-06-08", 0));
 
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView.setAdapter(adapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 DeliveryItem item = (DeliveryItem) adapter.getItem(position);
@@ -43,7 +45,7 @@ public class Delivery extends AppCompatActivity {
 
 class DeliveryAdapter extends ArrayAdapter {
     Context context;
-    ArrayList<DeliveryItem> boxs = new ArrayList<DeliveryItem>();
+    ArrayList<DeliveryItem> items = new ArrayList<DeliveryItem>();
 
     public DeliveryAdapter(@NonNull Context context, int resource) {
         super(context, resource);
@@ -54,16 +56,16 @@ class DeliveryAdapter extends ArrayAdapter {
 
     @Override
     public int getCount() {
-        return boxs.size();
+        return items.size();
     }
 
     public void addItems(DeliveryItem item){
-        boxs.add(item);
+        items.add(item);
     }
 
     @Override
     public Object getItem(int position) {
-        return boxs.get(position);
+        return items.get(position);
     }
 
     @Override
@@ -75,9 +77,9 @@ class DeliveryAdapter extends ArrayAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         DeliveryItemView view = new DeliveryItemView(context);
-        DeliveryItem box = boxs.get(position);
-        view.setTextView_date(box.getDate());
-        view.setTextView_check(box.getCheck());
+        DeliveryItem item = items.get(position);
+        view.setTextView_date(item.getDate());
+        view.setTextView_check(item.getCheck());
 
         return view;
     }

@@ -75,20 +75,21 @@ public class Main3Activity extends AppCompatActivity {
 
             }
         });
-community.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent=new Intent(Main3Activity.this,Comunity.class);
-        startActivityForResult(intent,requestcode14);
-    }
-});
-delivery.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent=new Intent(Main3Activity.this,Delivery.class);
-        startActivityForResult(intent,requestcode15);
-    }
-});
+        community.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Main3Activity.this,Comunity.class);
+                startActivityForResult(intent,requestcode14);
+            }
+        });
+        delivery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(Main3Activity.this, "택배 클릭", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(Main3Activity.this,Delivery.class);
+                startActivityForResult(intent,requestcode15);
+            }
+        });
 //visitCar.setOnClickListener(new View.OnClickListener() {
 //    @Override
 //    public void onClick(View v) {
