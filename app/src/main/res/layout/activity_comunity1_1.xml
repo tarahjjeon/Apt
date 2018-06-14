@@ -91,10 +91,6 @@
                     android:textColor="#ff5f5f"/>
             </LinearLayout>
 
-
-
-
-
         </GridLayout>
 
     </ScrollView>

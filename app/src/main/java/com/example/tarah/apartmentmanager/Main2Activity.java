@@ -7,11 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Main2Activity extends AppCompatActivity {
     Button addCarBtn;
     Button userSetBtn;
     EditText newPw;
     EditText carNum,car2Num,car3Num;
+    String pw,carN,carN2,carN3;
+    DatabaseReference people;
+    user user1;
 
     int carCount=0;
     final int requestcode=23;
@@ -33,9 +39,11 @@ public class Main2Activity extends AppCompatActivity {
         car3Num=(EditText)findViewById(R.id.car3Num);
         car2Num.setVisibility(View.GONE);
         car3Num.setVisibility(View.GONE);
-    }
+        people= FirebaseDatabase.getInstance().getReference("mainLogin/appuser");
 
+    }
     public void addListener(){
+
 
         addCarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +51,7 @@ public class Main2Activity extends AppCompatActivity {
                 if(carCount==0)
                 {
                 car2Num.setVisibility(v.VISIBLE);
-            carCount++;
+                carCount++;
 
                 }
                 else
@@ -53,10 +61,34 @@ public class Main2Activity extends AppCompatActivity {
         userSetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+               pw=newPw.getText().toString();
+               carN=carNum.getText().toString();
+               carN2=car2Num.getText().toString();
+               carN3=car3Num.getText().toString();
+               //user만 바꿀수 있다.ㅎㅎ
+               people.child("user1").child("password").setValue(pw);
+               people.child("user1").child("carNum").setValue(carN);
+                people.child("user1").child("carNum2").setValue(carN2);
+                people.child("user1").child("carNum3").setValue(carN3);
+//
+//                people.addListenerForSingleValueEvent(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                        user1=dataSnapshot.child("user1").getValue(user.class);
+//                        user1.setCode(pw);
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                    }
+//                });
                Intent intent=new Intent(Main2Activity.this,Main3Activity.class);
                startActivityForResult(intent,requestcode);
             }
         });
+
+
     }
 
 }
