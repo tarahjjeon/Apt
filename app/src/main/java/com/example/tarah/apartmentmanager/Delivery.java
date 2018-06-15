@@ -1,42 +1,5 @@
 package com.example.tarah.apartmentmanager;
 
-<<<<<<< HEAD
-public class Delivery {
-
-
-        boolean check;
-        String date;
-        String r_user;
-
-    public Delivery(boolean check, String date, String r_user) {
-        this.check = check;
-        this.date = date;
-        this.r_user = r_user;
-    }
-
-    public boolean isCheck() {
-        return check;
-    }
-
-    public void setCheck(boolean check) {
-        this.check = check;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getR_user() {
-        return r_user;
-    }
-
-    public void setR_user(String r_user) {
-        this.r_user = r_user;
-=======
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -119,7 +82,6 @@ class DeliveryAdapter extends ArrayAdapter {
         view.setTextView_check(item.getCheck());
 
         return view;
->>>>>>> 42d51caedb55444e789f8ddf5f4141cd496d0c72
     }
 
 }
