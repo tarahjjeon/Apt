@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "223306660274-lo9j36au8g0jonv908poc533qs6ng1f6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tarah.apartmentmanager",
+            "certificate_hash": "d5d97c636f986f7db67a62d03f8986d522411a21"
+          }
+        },
+        {
           "client_id": "223306660274-jg61nqh8i694emg4bupvf6inq1ag6e32.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

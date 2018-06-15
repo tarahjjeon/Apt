@@ -130,6 +130,7 @@ public class Main3Activity extends BaseActivity{
         community.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 Intent intent = new Intent(Main3Activity.this, Comunity.class);
                 startActivityForResult(intent, requestcode14);
             }
@@ -141,6 +142,20 @@ public class Main3Activity extends BaseActivity{
 //        startActivityForResult(intent,requestcode15);
         // }
 //});
+=======
+                Intent intent=new Intent(Main3Activity.this,Comunity.class);
+                startActivityForResult(intent,requestcode14);
+            }
+        });
+        delivery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(Main3Activity.this, "택배 클릭", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(Main3Activity.this,Delivery.class);
+                startActivityForResult(intent,requestcode15);
+            }
+        });
+>>>>>>> 42d51caedb55444e789f8ddf5f4141cd496d0c72
 //visitCar.setOnClickListener(new View.OnClickListener() {
 //    @Override
 //    public void onClick(View v) {

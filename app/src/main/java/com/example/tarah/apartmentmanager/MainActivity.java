@@ -31,10 +31,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+<<<<<<< HEAD
        databaseReference= FirebaseDatabase.getInstance().getReference("mainLogin/appuser");
 
        // user first=new user("user","서영","318","7685","318");
       // databaseReference.child(first.getId()).setValue( first);
+=======
+        DatabaseReference hyojin= FirebaseDatabase.getInstance().getReference("mainLogin/user");
+        user first=new user("apt","효진",318);
+       hyojin.child(first.getId()).setValue( first);
+>>>>>>> 42d51caedb55444e789f8ddf5f4141cd496d0c72
        //hyojin.child(first.getId()).child("name").setValue("윤채");
         // hyojin.child(first.getId()).removeValue();
 

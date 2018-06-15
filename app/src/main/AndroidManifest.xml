@@ -28,6 +28,7 @@
         <activity android:name=".Comunity" />
         <activity android:name=".Delivery" />
         <activity android:name=".Comunity1_1" />
+<<<<<<< HEAD
         <activity android:name=".AptUser" />
         <activity
             android:name=".BaseActivity"
@@ -36,6 +37,8 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"></activity>
+=======
+>>>>>>> 42d51caedb55444e789f8ddf5f4141cd496d0c72
     </application>
 
 </manifest>

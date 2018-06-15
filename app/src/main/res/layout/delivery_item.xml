@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#ffffff">
+    <TextView
+        android:id="@+id/textView_date"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="2018.06.08"
+        android:textSize="20dp"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/textView_check"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="수령완료"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textAlignment="center" />
+    <ImageView
+        android:id="@+id/imageView_check"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/deliveryboxcheckimg"/>
+</LinearLayout>
