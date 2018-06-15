@@ -2,10 +2,9 @@ package com.example.tarah.apartmentmanager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class Comunity extends AppCompatActivity {
+public class Comunity extends BaseActivity {
 
     final int requestcode=11;
     @Override

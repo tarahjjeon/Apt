@@ -74,15 +74,18 @@ public class MainActivity extends AppCompatActivity {
                         for(DataSnapshot data:dataSnapshot.getChildren()){
 
                             if(data.child("code").getValue().equals(code)&&data.child("password").getValue().equals(pw)){
-                                check++;                                                           }
+                                check++;
                             }
+                        }
                            if(check>0){
                                 Toast.makeText(getApplicationContext(),"환영합니다",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                               Intent intent_d=new Intent(MainActivity.this,Delivery.class);
+                               intent_d.putExtra("idcode",code);
                                 startActivityForResult(intent, requestCode);
                             } else {
                                Toast.makeText(getApplicationContext(), "로그인 오류", Toast.LENGTH_SHORT).show();
-loginPW.setText("");loginC.setText("");
+                                loginPW.setText("");loginC.setText("");
                            }
 
                         }
@@ -93,8 +96,6 @@ loginPW.setText("");loginC.setText("");
 
                     }
                 });
-
-
 
 
             }
