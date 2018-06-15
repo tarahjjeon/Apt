@@ -24,7 +24,10 @@ public class Delivery extends AppCompatActivity {
     GridView gridView;
     DeliveryAdapter adapter;
     Context context;
+
     DatabaseReference databaseReference;
+String code;
+String[] codeDong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +38,12 @@ public class Delivery extends AppCompatActivity {
 
         gridView=(GridView) findViewById(R.id.gridView);
         adapter = new DeliveryAdapter(getApplicationContext(), R.layout.delivery_item);
+
         Intent intent=getIntent();
+        code=intent.getStringExtra("code");
+        codeDong=code.split("-");
+        String refer="webDB/notice/Building/"+codeDong[0];//동이고 codeDong[1]은 호야
+
         adapter.addItems(new DeliveryItem("2018-06-03", 1));
         adapter.addItems(new DeliveryItem("2018-06-05", 1));
         adapter.addItems(new DeliveryItem("2018-06-07", 0));

@@ -38,9 +38,13 @@
         <!-- android:name=".LoginActivity" -->
         <!-- android:label="@string/title_activity_login"></activity> -->
 
+<<<<<<< HEAD
         <activity android:name=".setNickname" />
         <activity android:name=".CommunityMypage" />
         <activity android:name=".Community_write"></activity>
+=======
+        <activity android:name=".visitCar"></activity>
+>>>>>>> bdb2701933e3eee03b424d2366df36a8ad060712
     </application>
 
 </manifest>
