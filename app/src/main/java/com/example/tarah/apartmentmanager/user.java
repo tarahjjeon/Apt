@@ -3,11 +3,19 @@ package com.example.tarah.apartmentmanager;
 public class user {
     String id;
     String name;
-    int code;
-    public user(String id,String name,int code){
-        this.id=id;
-        this.name=name;
-        this.code=code;
+    String code;
+    String carNum;
+    Delivery delivery;
+    String password;
+
+
+    public user(String id, String name, String code, String carNum, Delivery delivery, String password) {
+        this.id = id;
+        this.name = name;
+        this.code = code;
+        this.carNum = carNum;
+        this.delivery = delivery;
+        this.password = password;
     }
 
     public String getId() {
@@ -26,11 +34,41 @@ public class user {
         this.name = name;
     }
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
+
+    public String getCarNum() {
+        return carNum;
+    }
+
+    public void setCarNum(String carNum) {
+        this.carNum = carNum;
+    }
+
+    public Delivery getDelivery() {
+        return delivery;
+    }
+
+    public void setDelivery(Delivery delivery) {
+        this.delivery = delivery;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
+
+
+
+
+
+
