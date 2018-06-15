@@ -17,7 +17,7 @@ public class Delivery extends AppCompatActivity {
     GridView gridView;
     DeliveryAdapter adapter;
     Context context;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
