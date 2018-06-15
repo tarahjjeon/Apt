@@ -12,6 +12,7 @@ public class Comunity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comunity);
+        Intent intent=getIntent();
     }
 
     public void onClickBtn1(View v){

@@ -5,7 +5,7 @@ public class user {
     String name;
     String code;
     String carNum;
-    Delivery delivery;
+
     String password;
 
 
@@ -14,7 +14,7 @@ public class user {
         this.name = name;
         this.code = code;
         this.carNum = carNum;
-        this.delivery = delivery;
+
         this.password = password;
     }
 
@@ -48,14 +48,6 @@ public class user {
 
     public void setCarNum(String carNum) {
         this.carNum = carNum;
-    }
-
-    public Delivery getDelivery() {
-        return delivery;
-    }
-
-    public void setDelivery(Delivery delivery) {
-        this.delivery = delivery;
     }
 
     public String getPassword() {

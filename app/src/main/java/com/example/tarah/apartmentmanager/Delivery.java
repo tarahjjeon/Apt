@@ -1,6 +1,7 @@
 package com.example.tarah.apartmentmanager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -26,7 +27,7 @@ public class Delivery extends AppCompatActivity {
         gridView=(GridView) findViewById(R.id.gridView);
         adapter = new DeliveryAdapter(getApplicationContext(), R.layout.delivery_item);
 //        adapter = new DeliveryAdapter();
-
+Intent intent=getIntent();
         adapter.addItems(new DeliveryItem("2018-06-03", 1));
         adapter.addItems(new DeliveryItem("2018-06-05", 1));
         adapter.addItems(new DeliveryItem("2018-06-07", 0));

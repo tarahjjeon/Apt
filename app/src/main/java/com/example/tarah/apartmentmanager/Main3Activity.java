@@ -127,57 +127,24 @@ public class Main3Activity extends BaseActivity{
 
             }
         });
-        community.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-<<<<<<< HEAD
-                Intent intent = new Intent(Main3Activity.this, Comunity.class);
-                startActivityForResult(intent, requestcode14);
-            }
-        });
-//delivery.setOnClickListener(new View.OnClickListener() {
-//    @Override
-//    public void onClick(View v) {
-//        Intent intent=new Intent(Main3Activity.this,Delivery.class);
-//        startActivityForResult(intent,requestcode15);
-        // }
-//});
-=======
-                Intent intent=new Intent(Main3Activity.this,Comunity.class);
-                startActivityForResult(intent,requestcode14);
-            }
-        });
+
         delivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(Main3Activity.this, "택배 클릭", Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(Main3Activity.this,Delivery.class);
-                startActivityForResult(intent,requestcode15);
+                Intent intent=new Intent(Main3Activity.this, Delivery.class);
+                startActivityForResult(intent, requestcode14);
+
             }
         });
->>>>>>> 42d51caedb55444e789f8ddf5f4141cd496d0c72
-//visitCar.setOnClickListener(new View.OnClickListener() {
-//    @Override
-//    public void onClick(View v) {
-//        Intent intent=new Intent(Main3Activity.visitCar.class);
-//        startActivityForResult(intent,requestcode5);
-//    }
-//});
-//        addBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent=new Intent(Main3Activity.this,Notice.class);
-//                startActivityForResult(intent,requestcode2);
-//            }
-//        });
-//        addBtn2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent2=new Intent(Main3Activity.this,Notice.class);
-//                startActivityForResult(intent2,requestcode3);
-//            }
-//        });
+        community.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Main3Activity.this, Comunity.class);
+                startActivityForResult(intent, requestcode15);
+
+            }
+        });
 
 
-    }
-}
+    }}
+
