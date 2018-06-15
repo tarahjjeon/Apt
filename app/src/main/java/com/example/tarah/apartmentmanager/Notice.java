@@ -27,6 +27,9 @@ public class Notice extends AppCompatActivity {
      ArrayList<String> arrayListAll, arrayListDong;
     DatabaseReference noticeDataAll;
     DatabaseReference noticeDataDong;
+    String code;
+    String[] codeDong;
+
 
     ArrayList<ArrayList<String>> mChildList=null;
     ArrayList<String> mChildListContent=null;
@@ -40,8 +43,10 @@ public class Notice extends AppCompatActivity {
         addListener();
     }
     public void init(){
-
+        String wow="";
         Intent intent=getIntent();
+        code=intent.getStringExtra("code");
+
         ntcHome=findViewById(R.id.ntcHome);
         ntcAll=findViewById(R.id.ntcAll);
         ntcDong=findViewById(R.id.ntcDong);
@@ -64,9 +69,10 @@ public class Notice extends AppCompatActivity {
 
 
 
-
+      codeDong=code.split("-");
+      String refer="webDB/notice/Building/"+codeDong[0];
       noticeDataAll= FirebaseDatabase.getInstance().getReference("webDB/notice/All");
-      noticeDataDong=FirebaseDatabase.getInstance().getReference("webDB/notice/Building/101");
+      noticeDataDong=FirebaseDatabase.getInstance().getReference(refer);
         if(checkNum==70){
             noticeList2.setVisibility(View.GONE);
             noticeList.setVisibility(View.VISIBLE);

@@ -65,11 +65,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
                 code = loginC.getText().toString();
                 pw = loginPW.getText().toString();
                 databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                         int check=0;
                         for(DataSnapshot data:dataSnapshot.getChildren()){
 
@@ -77,8 +79,12 @@ public class MainActivity extends AppCompatActivity {
                                 check++;                                                           }
                             }
                            if(check>0){
+
                                 Toast.makeText(getApplicationContext(),"환영합니다",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                               intent.putExtra("code",code);
+                               setResult(RESULT_OK,intent);
+                               finish();
                                 startActivityForResult(intent, requestCode);
                             } else {
                                Toast.makeText(getApplicationContext(), "로그인 오류", Toast.LENGTH_SHORT).show();

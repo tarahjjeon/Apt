@@ -13,6 +13,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Complaint extends BaseActivity {
     TextView newCpt,cptS,cptS1,cptS2,cptG,cptG1;
+    String code,refer;
+    String[] codeDong;
    DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,9 @@ public class Complaint extends BaseActivity {
     }
     public void init(){
         Intent intent=getIntent();
+        code=intent.getStringExtra("code");
+        codeDong=code.split("-");
+       refer="webDB/notice/each/"+codeDong[0];
         newCpt=findViewById(R.id.newCpt);
         cptS=findViewById(R.id.cptS);
        // cptS1=findViewById(R.id.cptS1);
@@ -34,16 +39,20 @@ public class Complaint extends BaseActivity {
         getNewCpt();
     }
    public void getNewCpt(){
-        databaseReference= FirebaseDatabase.getInstance().getReference("webDB/notice/each/101");
+        databaseReference= FirebaseDatabase.getInstance().getReference(refer);
         databaseReference.addValueEventListener(new ValueEventListener() {
 
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String str=" ";
+                String key=codeDong[1];
                 for(DataSnapshot snapshot:dataSnapshot.getChildren())
                 {
-                  str+=snapshot.getValue().toString()+"\n";
+
+if(snapshot.getKey().toString().equals(key)) {
+    str += snapshot.getValue().toString() + "\n";
+}
                 }
                 newCpt.setText(str);
             }

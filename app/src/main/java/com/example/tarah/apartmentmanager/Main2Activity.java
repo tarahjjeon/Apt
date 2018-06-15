@@ -18,6 +18,8 @@ public class Main2Activity extends AppCompatActivity {
     String pw,carN,carN2,carN3;
     DatabaseReference people;
     user user1;
+    String code;
+    String[] codeDong;
 
     int carCount=0;
     final int requestcode=23;
@@ -26,11 +28,11 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         init();
-        addListener();
+
     }
     public void init(){
         Intent intent=getIntent();
-
+        code=intent.getStringExtra("code");
         addCarBtn=(Button)findViewById(R.id.addCarBtn);
         userSetBtn=(Button)findViewById(R.id.userSetBtn);
         newPw=(EditText)findViewById(R.id.newPw);
@@ -39,7 +41,11 @@ public class Main2Activity extends AppCompatActivity {
         car3Num=(EditText)findViewById(R.id.car3Num);
         car2Num.setVisibility(View.GONE);
         car3Num.setVisibility(View.GONE);
-        people= FirebaseDatabase.getInstance().getReference("mainLogin/appuser");
+        codeDong=code.split("-");
+        String refer="mainLogin/appuser";
+        people=FirebaseDatabase.getInstance().getReference(refer);
+        String key=codeDong[1];
+       addListener();
 
     }
     public void addListener(){
@@ -66,6 +72,8 @@ public class Main2Activity extends AppCompatActivity {
                carN2=car2Num.getText().toString();
                carN3=car3Num.getText().toString();
                //user만 바꿀수 있다.ㅎㅎ
+
+
                people.child("user1").child("password").setValue(pw);
                people.child("user1").child("carNum").setValue(carN);
                 people.child("user1").child("carNum2").setValue(carN2);
@@ -84,6 +92,9 @@ public class Main2Activity extends AppCompatActivity {
 //                    }
 //                });
                Intent intent=new Intent(Main2Activity.this,Main3Activity.class);
+                intent.putExtra("code",code);
+                setResult(RESULT_OK,intent);
+                finish();
                startActivityForResult(intent,requestcode);
             }
         });
