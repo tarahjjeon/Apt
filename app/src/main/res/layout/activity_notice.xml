@@ -56,7 +56,7 @@
 <ListView
     android:id="@+id/noticeList"
        android:gravity="center"
-    android:background="#123333"
+    android:background="#FFFFE6"
     android:layout_width="300dp"
     android:layout_height="match_parent" />
     <ListView
