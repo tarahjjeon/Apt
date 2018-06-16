@@ -75,8 +75,9 @@ public class MainActivity extends BaseActivity {
                         for(DataSnapshot data:dataSnapshot.getChildren()){
 
                             if(data.child("code").getValue().equals(code)&&data.child("password").getValue().equals(pw)){
-                                check++;                                                           }
+                                check++;
                             }
+                        }
                            if(check>0){
 
                                 Toast.makeText(getApplicationContext(),"환영합니다",Toast.LENGTH_SHORT).show();
@@ -87,7 +88,7 @@ public class MainActivity extends BaseActivity {
                                 startActivityForResult(intent, requestCode);
                             } else {
                                Toast.makeText(getApplicationContext(), "로그인 오류", Toast.LENGTH_SHORT).show();
-loginPW.setText("");loginC.setText("");
+                                loginPW.setText("");loginC.setText("");
                            }
 
                         }
@@ -98,8 +99,6 @@ loginPW.setText("");loginC.setText("");
 
                     }
                 });
-
-
 
 
             }

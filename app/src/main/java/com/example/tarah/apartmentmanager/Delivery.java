@@ -12,26 +12,38 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
 public class Delivery extends AppCompatActivity {
     GridView gridView;
     DeliveryAdapter adapter;
     Context context;
+
+    DatabaseReference databaseReference;
 String code;
 String[] codeDong;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
 
+        databaseReference= FirebaseDatabase.getInstance().getReference("WebDB/post");
+
         gridView=(GridView) findViewById(R.id.gridView);
         adapter = new DeliveryAdapter(getApplicationContext(), R.layout.delivery_item);
-//        adapter = new DeliveryAdapter();
-Intent intent=getIntent();
+
+        Intent intent=getIntent();
         code=intent.getStringExtra("code");
         codeDong=code.split("-");
         String refer="webDB/notice/Building/"+codeDong[0];//동이고 codeDong[1]은 호야
+
         adapter.addItems(new DeliveryItem("2018-06-03", 1));
         adapter.addItems(new DeliveryItem("2018-06-05", 1));
         adapter.addItems(new DeliveryItem("2018-06-07", 0));
@@ -47,6 +59,28 @@ Intent intent=getIntent();
             }
         });
     }
+
+    public void showList(){
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            Intent intent=getIntent();
+//            String userlive =intent.getIntExtra("idcode", 0);
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot data:dataSnapshot.getChildren()){
+
+//                    if(data.child("code").getValue().equals(code)&&data.child("password").getValue().equals(pw)){
+//
+//                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
 }
 
 class DeliveryAdapter extends ArrayAdapter {
