@@ -2,13 +2,17 @@ package com.example.tarah.apartmentmanager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Main2Activity extends AppCompatActivity {
     Button addCarBtn;
@@ -73,24 +77,25 @@ public class Main2Activity extends AppCompatActivity {
                carN3=car3Num.getText().toString();
                //user만 바꿀수 있다.ㅎㅎ
 
+                people.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for(DataSnapshot data:dataSnapshot.getChildren()) {
+                            if(data.child("code").getValue().toString().equals(code)) {
 
-               people.child("user1").child("password").setValue(pw);
-               people.child("user1").child("carNum").setValue(carN);
-                people.child("user1").child("carNum2").setValue(carN2);
-                people.child("user1").child("carNum3").setValue(carN3);
-//
-//                people.addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                        user1=dataSnapshot.child("user1").getValue(user.class);
-//                        user1.setCode(pw);
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                    }
-//                });
+                                people.child(data.getKey()).child("password").setValue(pw);
+                                people.child(data.getKey()).child("carNum").setValue(carN);
+                                people.child(data.getKey()).child("carNum2").setValue(carN2);
+                                people.child(data.getKey()).child("carNum3").setValue(carN3);
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) { }
+                });
+
+
                Intent intent=new Intent(Main2Activity.this,Main3Activity.class);
                 intent.putExtra("code",code);
                 setResult(RESULT_OK,intent);

@@ -106,6 +106,7 @@ public class Main3Activity extends BaseActivity{
 
                 Intent intent = new Intent(Main3Activity.this, Notice.class);
 
+                intent.putExtra("test", 70);
                 intent.putExtra("code",code);
                 setResult(RESULT_OK,intent);
                 finish();
@@ -121,6 +122,7 @@ public class Main3Activity extends BaseActivity{
 
                 Intent intent = new Intent(Main3Activity.this, Notice.class);
 
+                intent.putExtra("test", 72);
                 intent.putExtra("code",code);
                 setResult(RESULT_OK,intent);
                 finish();

@@ -11,23 +11,32 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
 public class Complaint extends BaseActivity {
     TextView newCpt,cptS,cptS1,cptS2,cptG,cptG1;
     String code,refer;
-    String[] codeDong;
+    ArrayList<String> codeDong;
    DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complaint);
-        init();
+       init();
 
     }
     public void init(){
         Intent intent=getIntent();
         code=intent.getStringExtra("code");
-        codeDong=code.split("-");
-       refer="webDB/notice/each/"+codeDong[0];
+
+        codeDong=new ArrayList<>();
+
+        StringTokenizer st=new StringTokenizer(code, "-");
+        codeDong.add(st.nextToken());
+        codeDong.add(st.nextToken());
+
+       refer="webDB/notice/each/"+codeDong.get(0);
         newCpt=findViewById(R.id.newCpt);
         cptS=findViewById(R.id.cptS);
        // cptS1=findViewById(R.id.cptS1);
@@ -46,7 +55,7 @@ public class Complaint extends BaseActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String str=" ";
-                String key=codeDong[1];
+                String key=codeDong.get(1);
                 for(DataSnapshot snapshot:dataSnapshot.getChildren())
                 {
 
