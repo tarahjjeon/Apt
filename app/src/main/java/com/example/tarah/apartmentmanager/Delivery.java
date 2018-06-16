@@ -26,8 +26,8 @@ public class Delivery extends AppCompatActivity {
     Context context;
 
     DatabaseReference databaseReference;
-String code;
-String[] codeDong;
+    String code;
+    String[] codeDong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +44,10 @@ String[] codeDong;
         codeDong=code.split("-");
         String refer="webDB/notice/Building/"+codeDong[0];//동이고 codeDong[1]은 호야
 
-        adapter.addItems(new DeliveryItem("2018-06-03", 1));
-        adapter.addItems(new DeliveryItem("2018-06-05", 1));
-        adapter.addItems(new DeliveryItem("2018-06-07", 0));
-        adapter.addItems(new DeliveryItem("2018-06-08", 0));
+//        adapter.addItems(new DeliveryItem("2018-06-03", 1));
+//        adapter.addItems(new DeliveryItem("2018-06-05", 1));
+//        adapter.addItems(new DeliveryItem("2018-06-07", 0));
+//        adapter.addItems(new DeliveryItem("2018-06-08", 0));
 
         gridView.setAdapter(adapter);
 
@@ -63,14 +63,16 @@ String[] codeDong;
     public void showList(){
         databaseReference.addValueEventListener(new ValueEventListener() {
             Intent intent=getIntent();
-//            String userlive =intent.getIntExtra("idcode", 0);
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot data:dataSnapshot.getChildren()){
-
-//                    if(data.child("code").getValue().equals(code)&&data.child("password").getValue().equals(pw)){
-//
-//                    }
+                    //동, 호가 같은면 출력
+                    if(data.child("buildingNum").getValue().equals(codeDong[0])&&data.child("roomNum").getValue().equals(codeDong[1])){
+                        String date = data.child("date").getValue().toString();
+                        int check = Integer.parseInt(data.child("check").getValue().toString());
+                        adapter.addItems(new DeliveryItem(date,check));
+                    }
                 }
             }
 

@@ -23,12 +23,6 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:background="@drawable/writeicon"
-            android:shadowColor="#f1c550"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
             android:background="@drawable/mypageicon"
             android:shadowColor="#f1c550"/>
     </LinearLayout>

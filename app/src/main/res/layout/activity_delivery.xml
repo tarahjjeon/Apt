@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffeeeeee">
-    <!--tools:context=".Delivery" >-->
+    android:background="#ffeeeeee"
+    tools:context=".Delivery" >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
