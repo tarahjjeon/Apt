@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</android.support.constraint.ConstraintLayout>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="#ffffff">
+    <ImageView
+        android:id="@+id/mart_img"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:src="@drawable/deliveryboximg"
+        android:layout_gravity="center" />
+    <TextView
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:text="전자랜지"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:text="전자랜지를 새로사서 싸게 팝니다"
+        />
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:textSize="25dp"
+        android:gravity="right"
+        android:text="10000원"
+        android:textColor="#ff5f5f"/>
+</LinearLayout>
