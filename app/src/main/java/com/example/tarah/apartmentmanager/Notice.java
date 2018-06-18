@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 public class Notice extends AppCompatActivity {
      Button ntcHome;
@@ -28,9 +29,9 @@ public class Notice extends AppCompatActivity {
     DatabaseReference noticeDataAll;
     DatabaseReference noticeDataDong;
     String code;
-    String[] codeDong;
-
-
+   // String[] codeDong;
+ArrayList<String> codeDong;
+String refer;
     ArrayList<ArrayList<String>> mChildList=null;
     ArrayList<String> mChildListContent=null;
      int checkNum;
@@ -46,6 +47,8 @@ public class Notice extends AppCompatActivity {
         String wow="";
         Intent intent=getIntent();
         code=intent.getStringExtra("code");
+
+
 
         ntcHome=findViewById(R.id.ntcHome);
         ntcAll=findViewById(R.id.ntcAll);
@@ -65,12 +68,18 @@ public class Notice extends AppCompatActivity {
         arrayAdapterDong.notifyDataSetChanged();
         arrayAdapterAll.notifyDataSetChanged();
 
+        codeDong=new ArrayList<>();
+
+        StringTokenizer st=new StringTokenizer(code, "-");
+        codeDong.add(st.nextToken());
+        codeDong.add(st.nextToken());
+
+        refer="webDB/notice/Building/"+codeDong.get(1);
+//Toast.makeText(getApplicationContext(),refer,Toast.LENGTH_SHORT).show();
 
 
-
-
-      codeDong=code.split("-");
-      String refer="webDB/notice/Building/"+codeDong[0];
+    //  codeDong=code.split("-");
+      //String refer="webDB/notice/Building/"+codeDong[0];
       noticeDataAll= FirebaseDatabase.getInstance().getReference("webDB/notice/All");
       noticeDataDong=FirebaseDatabase.getInstance().getReference(refer);
         if(checkNum==70){
@@ -88,6 +97,8 @@ public class Notice extends AppCompatActivity {
 
 
         readFile();
+
+
     }
     public void readFile(){
         noticeDataAll.addValueEventListener(new ValueEventListener() {
@@ -131,6 +142,7 @@ public class Notice extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Notice.this,Main3Activity.class);
+                intent.putExtra("code",code);
                 startActivityForResult(intent,requestcode);
             }
         });
@@ -147,7 +159,6 @@ public class Notice extends AppCompatActivity {
             public void onClick(View v) {
                 noticeList.setVisibility(View.GONE);
                 noticeList2.setVisibility(View.VISIBLE);
-
             }
         });
 

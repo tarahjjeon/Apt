@@ -41,6 +41,8 @@
         <activity android:name=".CommunityMypage" />
         <activity android:name=".Community_write"></activity>
         <activity android:name=".visitCar"></activity>
+
+>>>>>>> d0e0fb8217f6933d38bf6e109c24359e18c2f84f
     </application>
 
 </manifest>

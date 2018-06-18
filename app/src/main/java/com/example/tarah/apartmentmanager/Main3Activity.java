@@ -18,7 +18,8 @@ public class Main3Activity extends BaseActivity{
 
     TextView notice1, notice2;
     DatabaseReference databaseReference1, databaseReference2;
-    String code;
+    String code,refer;
+    String[] codeArray;
 
     final int requestcode11 = 34;
     final int requestcode12 = 35;
@@ -40,6 +41,9 @@ public class Main3Activity extends BaseActivity{
     public void init() {
         Intent intent = getIntent();
          code=intent.getStringExtra("code");
+         codeArray=code.split("-");
+
+       refer= "webDB/notice/Building/"+codeArray[1];
         setBtn3 = (ImageButton) findViewById(R.id.setBtn3);
         notice1 = (TextView) findViewById(R.id.notice1);
         notice2 = (TextView) findViewById(R.id.notice2);
@@ -55,7 +59,7 @@ public class Main3Activity extends BaseActivity{
 
     public void show() {
         databaseReference1 = FirebaseDatabase.getInstance().getReference("webDB/notice/All");
-        databaseReference2 = FirebaseDatabase.getInstance().getReference("webDB/notice/Building/101");
+        databaseReference2 = FirebaseDatabase.getInstance().getReference(refer);
         databaseReference1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -110,7 +114,6 @@ public class Main3Activity extends BaseActivity{
                 intent.putExtra("test", 70);
                 intent.putExtra("code",code);
                 setResult(RESULT_OK,intent);
-                finish();
                 startActivityForResult(intent, requestcode12);
 
 
@@ -126,7 +129,6 @@ public class Main3Activity extends BaseActivity{
                 intent.putExtra("test", 72);
                 intent.putExtra("code",code);
                 setResult(RESULT_OK,intent);
-                finish();
                 startActivityForResult(intent, requestcode13);
 
             }
@@ -137,7 +139,6 @@ public class Main3Activity extends BaseActivity{
                 Intent intent = new Intent(Main3Activity.this, Complaint.class);
                 intent.putExtra("code",code);
                 setResult(RESULT_OK,intent);
-                finish();
                 startActivityForResult(intent, requestcode11);
 
             }
@@ -149,7 +150,6 @@ public class Main3Activity extends BaseActivity{
                 Intent intent=new Intent(Main3Activity.this, Delivery.class);
                 intent.putExtra("code",code);
                 setResult(RESULT_OK,intent);
-                finish();
                 startActivityForResult(intent, requestcode14);
 
             }
@@ -164,6 +164,7 @@ public class Main3Activity extends BaseActivity{
                 }else {
                     Intent intent = new Intent(Main3Activity.this, Comunity.class);
                     startActivityForResult(intent, requestcode15);
+                    intent.putExtra("code",code);
                 }
             }
         });
@@ -171,6 +172,7 @@ public class Main3Activity extends BaseActivity{
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Main3Activity.this,visitCar.class);
+                intent.putExtra("code",code);
                 startActivityForResult(intent,requestcode16);
             }
         }));
