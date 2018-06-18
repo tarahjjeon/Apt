@@ -48,7 +48,7 @@ public class Main2Activity extends AppCompatActivity {
         codeDong=code.split("-");
         String refer="mainLogin/appuser";
         people=FirebaseDatabase.getInstance().getReference(refer);
-        String key=codeDong[1];
+        String key=codeDong[2];
        addListener();
 
     }
@@ -99,7 +99,6 @@ public class Main2Activity extends AppCompatActivity {
                Intent intent=new Intent(Main2Activity.this,Main3Activity.class);
                 intent.putExtra("code",code);
                 setResult(RESULT_OK,intent);
-                finish();
                startActivityForResult(intent,requestcode);
             }
         });

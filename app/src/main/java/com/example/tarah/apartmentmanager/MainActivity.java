@@ -84,7 +84,6 @@ public class MainActivity extends BaseActivity {
                                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                                intent.putExtra("code",code);
                                setResult(RESULT_OK,intent);
-                               finish();
                                 startActivityForResult(intent, requestCode);
                             } else {
                                Toast.makeText(getApplicationContext(), "로그인 오류", Toast.LENGTH_SHORT).show();
