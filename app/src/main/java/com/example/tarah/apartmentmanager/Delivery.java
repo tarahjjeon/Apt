@@ -68,7 +68,7 @@ public class Delivery extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot data:dataSnapshot.getChildren()){
                     //동, 호가 같은면 출력
-                    if(data.child("buildingNum").getValue().equals(codeDong[0])&&data.child("roomNum").getValue().equals(codeDong[1])){
+                    if(data.child("buildingNum").getValue().equals(codeDong[1])&&data.child("roomNum").getValue().equals(codeDong[2])){
                         String date = data.child("date").getValue().toString();
                         int check = Integer.parseInt(data.child("check").getValue().toString());
                         adapter.addItems(new DeliveryItem(date,check));
