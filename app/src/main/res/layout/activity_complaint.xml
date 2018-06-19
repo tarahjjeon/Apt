@@ -65,23 +65,7 @@ android:background="@drawable/back"
 
                     />
 
-                <!--<TextView-->
-                <!--android:id="@+id/cptS1"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="50dp"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:background="#bb0f0f8d"-->
-                <!--android:gravity="center_vertical"-->
-                <!--android:text="순찰 중" />-->
 
-                <!--<TextView-->
-                <!--android:id="@+id/cptS2"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="50dp"-->
-                <!--android:gravity="center_vertical"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:background="#bb0f0f8d"-->
-                <!--android:text="근무 중" />-->
             </LinearLayout>
 
             <LinearLayout
@@ -101,16 +85,6 @@ android:background="@drawable/back"
                     android:background="@drawable/gov"
                     android:scaleType="fitXY" />
 
-
-                <!--<TextView-->
-                <!--android:id="@+id/cptG1"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="50dp"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:background="#bb0f0f8d"-->
-                <!--android:text="근무 중\n근무 시간:"-->
-                <!--android:gravity="center_vertical"-->
-                <!--/>-->
 
             </LinearLayout>
         </LinearLayout>

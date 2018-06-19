@@ -6,9 +6,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ComplaintSend">
+    tools:context=".ComplaintSend"
+    android:background="@drawable/back">
 
-
-
+    <TextView
+        android:id="@+id/who1"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/complaintSendWho1"/>
+    <TextView
+        android:id="@+id/who2"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/complaintSendWho2"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/complaintSendText"
+        android:layout_gravity="center_horizontal"/>
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:background="@drawable/complaintSendback"
+        android:layout_gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/complaintSendBtn"/>
 
 </LinearLayout>

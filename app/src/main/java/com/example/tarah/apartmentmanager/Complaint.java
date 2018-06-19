@@ -3,6 +3,7 @@ package com.example.tarah.apartmentmanager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,6 +20,10 @@ public class Complaint extends BaseActivity {
     ArrayList<String> codeDong;
     String[] codeArray={""};
    DatabaseReference databaseReference;
+
+    final int requestcode1 = 51;
+    final int requestcode2 = 52;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +79,26 @@ if(snapshot.getKey().toString().equals(key)) {
         });
    }
  public void addListener(){
+     cptS.setOnClickListener(new View.OnClickListener() {
 
+         @Override
+         public void onClick(View v) {
+             Intent intent = new Intent(Complaint.this, ComplaintSend.class);
+             startActivityForResult(intent, requestcode1);
+             intent.putExtra("iswho2",0);
+         }
+     });
+     cptG.setOnClickListener(new View.OnClickListener() {
+
+         @Override
+         public void onClick(View v) {
+             Intent intent = new Intent(Complaint.this, ComplaintSend.class);
+             startActivityForResult(intent, requestcode2);
+             intent.putExtra("iswho2",1);
+         }
+     });
 
  }
+
+
 }
