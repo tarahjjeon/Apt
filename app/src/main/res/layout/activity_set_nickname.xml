@@ -20,23 +20,19 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/setnickname_txt"/>
     <EditText
-<<<<<<< HEAD
+
         android:textAlignment="center"
         android:id="@+id/nickName"
-=======
-        android:id="@+id/nickname"
->>>>>>> a51f9bd8365b06109b3a8269363efaba71abdfdf
-        android:layout_width="250dp"
+
+       android:layout_width="250dp"
         android:layout_height="65dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginVertical="20dp"
         android:background="@drawable/edit_txt"/>
     <Button
-<<<<<<< HEAD
+
         android:id="@+id/nickNameBtn"
-=======
-        android:id="@+id/regi"
->>>>>>> a51f9bd8365b06109b3a8269363efaba71abdfdf
+
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"

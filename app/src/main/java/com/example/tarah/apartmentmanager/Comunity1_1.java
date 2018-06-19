@@ -11,6 +11,7 @@ import android.widget.Spinner;
 
 public class Comunity1_1 extends AppCompatActivity {
     Button write, mypage;
+    String nick;
     final int requestcode11 = 340;
     final int requestcode12 = 350;
     ListView list;
@@ -27,6 +28,8 @@ public class Comunity1_1 extends AppCompatActivity {
     }
 
     public void init(){
+        Intent intent=new Intent();
+        nick=intent.getStringExtra("nick");
         write =(Button) findViewById(R.id.write_btn);
         mypage = (Button)findViewById(R.id.mypage_btn);
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,LIST_MENU);
@@ -56,6 +59,7 @@ public class Comunity1_1 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Comunity1_1.this, CommunityMypage.class);
                 startActivityForResult(intent, requestcode12);
+                intent.putExtra("nick",nick);
             }
         });
     }
