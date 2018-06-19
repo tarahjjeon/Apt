@@ -16,18 +16,24 @@
             android:layout_width="0dp"
             android:layout_weight="5"
             android:layout_height="match_parent"
-            android:text="우리동네 장터"
             android:textAlignment="center"
             android:textSize="25dp"
-            android:background="#f1c550"
+            android:background="@drawable/communitybar2"
             android:textColor="#f6f6f6"
             android:gravity="center_vertical" />
         <Button
+            android:id="@+id/write_btn"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="마이페이지"
-            android:background="#f1c550"
+            android:background="@drawable/writeicon"
+            android:shadowColor="#f1c550"/>
+        <Button
+            android:id="@+id/mypage_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/mypageicon"
             android:shadowColor="#f1c550"/>
     </LinearLayout>
     <LinearLayout
@@ -41,15 +47,17 @@
             android:layout_height="match_parent">
         </Spinner>
         <Button
+            android:layout_margin="5dp"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="무료나눔"/>
+            android:background="@drawable/share"/>
         <Button
+            android:layout_margin="5dp"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="삽니다"/>
+            android:background="@drawable/need"/>
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
@@ -64,11 +72,11 @@
                 android:layout_width="160dp"
                 android:layout_height="230dp"
                 android:padding="10dp"
-                android:background="#f6f6f6">
+                android:background="@drawable/itembackground">
                 <ImageView
                     android:layout_width="135dp"
                     android:layout_height="135dp"
-                    android:src="@drawable/deliveryboximg"
+                    android:src="@drawable/item1"
                     android:layout_gravity="center" />
                 <TextView
                     android:layout_width="90dp"
@@ -90,7 +98,169 @@
                     android:text="10000원"
                     android:textColor="#ff5f5f"/>
             </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_width="160dp"
+                android:layout_height="230dp"
+                android:padding="10dp"
+                android:background="@drawable/itembackground">
+                <ImageView
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:src="@drawable/item2"
+                    android:layout_gravity="center" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:text="아동복 팔아요"
+                    android:textSize="20dp" />
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="right"
+                    android:text="38분 전"/>
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:textSize="25dp"
+                    android:gravity="right"
+                    android:text="5000원"
+                    android:textColor="#ff5f5f"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_width="160dp"
+                android:layout_height="230dp"
+                android:padding="10dp"
+                android:background="@drawable/itembackground">
+                <ImageView
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:src="@drawable/item3"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="142dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:text="수학의정석 새 책"
+                    android:textSize="20dp" />
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="right"
+                    android:text="2시간 전"/>
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:textSize="25dp"
+                    android:gravity="right"
+                    android:text="3000원"
+                    android:textColor="#ff5f5f"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_width="160dp"
+                android:layout_height="230dp"
+                android:padding="10dp"
+                android:background="@drawable/itembackground">
+                <ImageView
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:src="@drawable/item4"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="133dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:text="강아지 장난감"
+                    android:textSize="20dp" />
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="right"
+                    android:text="13시간 전"/>
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:textSize="25dp"
+                    android:gravity="right"
+                    android:text="1500원"
+                    android:textColor="#ff5f5f"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_width="160dp"
+                android:layout_height="230dp"
+                android:padding="10dp"
+                android:background="@drawable/itembackground">
+                <ImageView
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:src="@drawable/item5"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20dp"
+                    android:text="선풍기"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="right"
+                    android:text="1일 전"/>
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:textSize="25dp"
+                    android:gravity="right"
+                    android:text="18000원"
+                    android:textColor="#ff5f5f"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_width="160dp"
+                android:layout_height="230dp"
+                android:padding="10dp"
+                android:background="@drawable/itembackground">
+                <ImageView
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:src="@drawable/item6"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20dp"
+                    android:text="3인용 소파"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="right"
+                    android:text="2일 전"/>
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="30dp"
+                    android:textSize="25dp"
+                    android:gravity="right"
+                    android:text="70000원"
+                    android:textColor="#ff5f5f"/>
+            </LinearLayout>
         </GridLayout>
 
     </ScrollView>
