@@ -25,7 +25,7 @@ public class Main3Activity extends BaseActivity{
     final int requestcode12 = 35;
     final int requestcode13 = 36;
     final int requestcode14 = 37;
-    final int requestcode15 = 38;
+    final int requestcode15 = 1432;
     final int requestcode16 = 39;
 
 
@@ -156,9 +156,10 @@ public class Main3Activity extends BaseActivity{
         community.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Main3Activity.this, Comunity.class);
-                startActivityForResult(intent, requestcode15);
+                Intent intent=new Intent(Main3Activity.this, setNickname.class);
                 intent.putExtra("code",code);
+                setResult(RESULT_OK,intent);
+         startActivityForResult(intent,requestcode15);
 
             }
         });

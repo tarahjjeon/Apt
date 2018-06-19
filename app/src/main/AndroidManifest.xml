@@ -28,7 +28,7 @@
         <activity android:name=".Comunity" />
         <activity android:name=".Delivery" />
         <activity android:name=".Comunity1_1" />
-        //>/
+        <activity android:name=".setNickname" />
 
         <activity
             android:name=".BaseActivity"

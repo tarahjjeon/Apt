@@ -6,7 +6,7 @@ import android.view.View;
 
 public class Comunity extends BaseActivity {
 
-    final int requestcode=11;
+    final int requestcode=38;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
