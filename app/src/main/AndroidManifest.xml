@@ -29,14 +29,12 @@
         <activity android:name=".Delivery" />
         <activity android:name=".Comunity1_1" />
         <activity android:name=".setNickname" />
-        <activity android:name=".MartItem" />
-        <activity android:name=".MartItemView"/>
-        <activity android:name=".MartAdapter"/>
+
         <activity
             android:name=".BaseActivity"
             android:label="@string/title_activity_base"
             android:theme="@style/AppTheme" />
-      
+
 
 
         <activity android:name=".visitCar"></activity>
