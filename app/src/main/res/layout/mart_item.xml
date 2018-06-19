@@ -13,17 +13,20 @@
         android:src="@drawable/deliveryboximg"
         android:layout_gravity="center" />
     <TextView
+        android:id="@+id/title"
         android:layout_width="90dp"
         android:layout_height="25dp"
         android:layout_marginTop="5dp"
         android:textSize="20dp"
         android:text="전자랜지"/>
     <TextView
+        android:id="@+id/subtitle"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
         android:text="전자랜지를 새로사서 싸게 팝니다"
         />
     <TextView
+        android:id="@+id/price"
         android:layout_width="140dp"
         android:layout_height="30dp"
         android:textSize="25dp"

@@ -25,27 +25,22 @@ public class MartAdapter extends ArrayAdapter{
         return items.size();
     }
 
-//    public void addItems(DeliveryItem item){
-//        items.add(item);
-//    }
+    public void addItems(MartItem item){ items.add(item); }
 
     @Override
-    public Object getItem(int position) {
-        return items.get(position);
-    }
+    public Object getItem(int position) { return items.get(position); }
 
     @Override
-    public long getItemId(int position) {
-        return position;
-    }
+    public long getItemId(int position) { return position; }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
         MartItemView view = new MartItemView(context);
         MartItem item = items.get(position);
-//        view.setTextView_date(item.getDate());
-//        view.setTextView_check(item.getCheck());
+        view.setTextView_title(item.getTitle());
+        view.setTextView_subtitle(item.getSubtitle());
+        view.setTextView_price(item.getPrice());
 
         return view;
     }

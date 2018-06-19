@@ -30,6 +30,7 @@
         <activity android:name=".Comunity1_1" />
         <activity android:name=".setNickname" />
 
+
         <activity
             android:name=".BaseActivity"
             android:label="@string/title_activity_base"
@@ -37,8 +38,10 @@
 
 
 
-        <activity android:name=".visitCar"></activity>
-
+        <activity android:name=".CommunityMypage" />
+        <activity android:name=".Community_write" />
+        <activity android:name=".visitCar" />
+        <activity android:name=".ComplaintSend"/>
     </application>
 
 </manifest>

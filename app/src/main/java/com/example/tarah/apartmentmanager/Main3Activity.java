@@ -27,6 +27,7 @@ public class Main3Activity extends BaseActivity{
     final int requestcode14 = 37;
     final int requestcode15 = 1432;
     final int requestcode16 = 39;
+    final int requestcode17 = 40;
 
 
     @Override
@@ -156,11 +157,23 @@ public class Main3Activity extends BaseActivity{
         community.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 Intent intent=new Intent(Main3Activity.this, setNickname.class);
                 intent.putExtra("code",code);
                 setResult(RESULT_OK,intent);
          startActivityForResult(intent,requestcode15);
 
+=======
+                boolean has_nickname = false;
+                if(!has_nickname) { //별명값이 없으면
+                    Intent intent2 = new Intent(Main3Activity.this, setNickname.class);
+                    startActivityForResult(intent2, requestcode17);
+                }else {
+                    Intent intent = new Intent(Main3Activity.this, Comunity.class);
+                    startActivityForResult(intent, requestcode15);
+                    intent.putExtra("code",code);
+                }
+>>>>>>> a51f9bd8365b06109b3a8269363efaba71abdfdf
             }
         });
         visitCar.setOnClickListener((new View.OnClickListener() {
